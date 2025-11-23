@@ -3,4 +3,3 @@ root = true
 [*] #Todos os tipos de arquivos estão sujeitos a estas regras
 indent_style = space #usar sempre o caracter de espaço
 indent_size = 2
-
