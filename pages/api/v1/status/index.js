@@ -1,4 +1,4 @@
-import db from "../../../../infra/db.js";
+import db from "infra/db.js";
 
 async function statusHandler(req, res) {
   const result = await db.query("SELECT NOW() AS current_time;");
