@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
+    "dev": "npm run services:up && next dev",
+    "services:up": "docker compose --file infra/compose.yaml up --detach",
+    "services:down": "docker compose --file infra/compose.yaml down",
+    "services:stop": "docker compose --file infra/compose.yaml stop",
     "test": "jest",
     "test-watch": "jest --watchAll",
     "lint:check": "prettier --check .",
