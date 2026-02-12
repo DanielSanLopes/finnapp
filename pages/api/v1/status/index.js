@@ -34,7 +34,7 @@ async function statusHandler(req, res) {
   // res.status(200).send({ message: "Deu certo, mãe!" });
   const updatedAt = new Date().toISOString();
   // console.log("result:", { updated_at: updatedAt, ...result.rows[0] });
-  res.status(200).send({
+  res.status(200).json({
     updated_at: updatedAt,
     dependencies: {
       database: {
