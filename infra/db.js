@@ -40,9 +40,14 @@ async function getNewClient() {
     // channelBinding: true,
   });
 
-  await client.connect().then((result) => {
-    console.log("Connected to PostgreSQL database successfully.");
-  });
+  await client
+    .connect()
+    .then((result) => {
+      console.log("Connected to PostgreSQL database successfully.");
+    })
+    .catch((error) => {
+      throw new Error("Error at connection: ", error);
+    });
   return client;
 }
 
