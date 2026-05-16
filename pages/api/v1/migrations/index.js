@@ -11,8 +11,8 @@ async function migrationsHandler(req, res) {
     console.log("GET request received at /api/v1/migrations");
 
     const pendingMigrations = await migrate({
-      databaseUrl: process.env.POSTGRES_URL,
-      // dbClient,
+      // databaseUrl: process.env.POSTGRES_URL,
+      dbClient,
       dryRun: true,
       dir: join("infra", "migrations"),
       direction: "up",
