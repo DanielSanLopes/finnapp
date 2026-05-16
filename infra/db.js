@@ -27,7 +27,7 @@ async function query(queryObject) {
 async function getNewClient() {
   const client = new Client({
     // connectionString: process.env.POSTGRES_URL,
-    hos: process.env.POSTGRES_HOST,
+    host: process.env.POSTGRES_HOST,
     port: process.env.POSTGRES_PORT,
     user: process.env.POSTGRES_USER,
     password: process.env.POSTGRES_PASSWORD,
@@ -40,14 +40,9 @@ async function getNewClient() {
     // channelBinding: true,
   });
 
-  await client
-    .connect()
-    .then((result) => {
-      console.log("Connected to PostgreSQL database successfully.");
-    })
-    .catch((error) => {
-      throw new Error("Error at connection: ", error);
-    });
+  await client.connect().then((result) => {
+    console.log("Connected to PostgreSQL database successfully.");
+  });
   return client;
 }
 
