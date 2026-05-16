@@ -1,0 +1,5 @@
+ pid | locktype | database | virtualtransaction |     mode      | granted |   objid   | classid | objsubid 
+-----+----------+----------+--------------------+---------------+---------+-----------+---------+----------
+  34 | advisory |    16384 | 3/0                | ExclusiveLock | t       | 708954076 | 1686128 |        1
+(1 row)
+

@@ -1,14 +1,9 @@
 test("get/api/v1/status should return 200", async () => {
-  const res = await fetch("http://localhost:3000/api/v1/status");
+  const res = await fetch("http://localhost:3001/api/v1/status");
   expect(res.status).toBe(200);
 
   const responseBody = await res.json();
   expect(responseBody.updated_at).toBeDefined();
-
-  // console.log(
-  //   "Response Body: ",
-  //   JSON.stringify(responseBody, null, 2).toString(),
-  // );
 
   const parsedUpdatedAt = new Date(responseBody.updated_at).toISOString();
   expect(parsedUpdatedAt).not.toBe(new Date(null).toISOString());
@@ -36,8 +31,8 @@ test("get/api/v1/status should return 200", async () => {
 });
 
 // test.only("Teste de SQL Injection", async () => {
-//   // await fetch("http://localhost:3000/api/v1/status?databaseName=local_db");
+//   // await fetch("http://localhost:3001/api/v1/status?databaseName=local_db");
 //   await fetch(
-//     "http://localhost:3000/api/v1/status?databaseName=local_db'; SELECT pg_sleep(4); --",
+//     "http://localhost:3001/api/v1/status?databaseName=local_db'; SELECT pg_sleep(4); --",
 //   );
 // });

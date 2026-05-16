@@ -1,0 +1,28 @@
+ pid |  usename   | state  |                               query                                
+-----+------------+--------+--------------------------------------------------------------------
+  30 |            |        | 
+  31 | local_user |        | 
+  34 | local_user | idle   | SELECT name FROM "public"."pgmigrations_table" ORDER BY run_on, id
+  35 | local_user | idle   | select pg_try_advisory_lock(7241865325823964) as "lockObtained"
+  36 | local_user | idle   | select pg_try_advisory_lock(7241865325823964) as "lockObtained"
+  41 | local_user | idle   | select pg_try_advisory_lock(7241865325823964) as "lockObtained"
+  42 | local_user | idle   | select pg_try_advisory_lock(7241865325823964) as "lockObtained"
+  43 | local_user | idle   | select pg_try_advisory_lock(7241865325823964) as "lockObtained"
+  44 | local_user | idle   | select pg_try_advisory_lock(7241865325823964) as "lockObtained"
+  45 | local_user | idle   | select pg_try_advisory_lock(7241865325823964) as "lockObtained"
+  46 | local_user | idle   | select pg_try_advisory_lock(7241865325823964) as "lockObtained"
+  57 | local_user | idle   | select pg_try_advisory_lock(7241865325823964) as "lockObtained"
+  58 | local_user | idle   | select pg_try_advisory_lock(7241865325823964) as "lockObtained"
+  59 | local_user | idle   | select pg_try_advisory_lock(7241865325823964) as "lockObtained"
+  60 | local_user | idle   | select pg_try_advisory_lock(7241865325823964) as "lockObtained"
+  61 | local_user | idle   | select pg_try_advisory_lock(7241865325823964) as "lockObtained"
+  62 | local_user | idle   | select pg_try_advisory_lock(7241865325823964) as "lockObtained"
+ 362 | local_user | idle   | select pg_try_advisory_lock(7241865325823964) as "lockObtained"
+ 363 | local_user | idle   | select pg_try_advisory_lock(7241865325823964) as "lockObtained"
+ 364 | local_user | idle   | select pg_try_advisory_lock(7241865325823964) as "lockObtained"
+ 368 | local_user | active | SELECT pid, usename, state, query FROM pg_stat_activity;
+  27 |            |        | 
+  26 |            |        | 
+  29 |            |        | 
+(24 rows)
+
